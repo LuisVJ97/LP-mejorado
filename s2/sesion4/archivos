@@ -1,0 +1,87 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Sesion4.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNjCa2jvLixOpVmE6KqsPeI"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "VbKAjR36QWTz"
+      },
+      "source": [
+        "# **CONTENIDO**\n",
+        "1. Manejo de archivos\n",
+        "2. Lambdas\n",
+        "3. Rercursividad"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QMDL7t8uQVXW",
+        "outputId": "e7706ec8-646b-4bcb-bd49-ef6062fe1236"
+      },
+      "source": [
+        "%%writefile archivos.cpp\n",
+        "#include <iostream>\n",
+        "#include <fstream>\n",
+        "using namespace std;\n",
+        "void coniostream(){\n",
+        "    int a;\n",
+        "    cout<<\"Intruduccion Colab\";\n",
+        "    cin>>a;\n",
+        "\n",
+        "}\n",
+        "void confstream(){\n",
+        "    string resultado;\n",
+        "    fstream archivo(\"texto.txt\",ios::out);\n",
+        "    archivo<<\"Hola mundo\";\n",
+        "    archivo>>resultado;\n",
+        "    archivo.close();\n",
+        "\n",
+        "}\n",
+        "int main(){\n",
+        "    confstream();\n",
+        "    return 0;\n",
+        "}"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Writing archivos.cpp\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "doKCHedWSLvG"
+      },
+      "source": [
+        "!g++ archivos.cpp && ./a.out"
+      ],
+      "execution_count": 2,
+      "outputs": []
+    }
+  ]
+}
